@@ -39,6 +39,9 @@ public class CompanyDocumentSolrService {
         SolrInputDocument document = new SolrInputDocument();
         document.addField("oid", company.getOid());
         document.addField("companyName", company.getCompanyName());
+        document.addField("address", company.getAddress());
+        document.addField("phone", company.getPhone());
+        document.addField("email", company.getEmail());
         document.addField("foundingDate", company.getFoundingYear());
         document.addField("updatedAt", company.getUpdatedAt());
         return document;
@@ -55,6 +58,11 @@ public class CompanyDocumentSolrService {
             ((QueryResponse) response).getResults().forEach(result -> {
                 AllCompaniesResponseDTO dto = AllCompaniesResponseDTO.builder()
                         .companyName(result.get("companyName").toString())
+                        .foundingYear((Integer) result.get("foundingYear"))
+                        .email(result.get("email").toString())
+                        .address(result.get("address").toString())
+                        .phone(result.get("phone").toString())
+                        .updatedAt((Long) result.get("updatedAt"))
                         .build();
                 responseDTOList.add(dto);
             });
@@ -63,7 +71,7 @@ public class CompanyDocumentSolrService {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            // Close the Solr client
+
             if (solrClient != null) {
                 solrClient.close();
             }

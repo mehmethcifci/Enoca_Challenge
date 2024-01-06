@@ -28,7 +28,7 @@ public class CompanyService {
         Company company = Company.builder()
                 .companyName(companyRequestDto.getCompanyName())
                 .email(companyRequestDto.getEmail())
-                .updatedAt(1559779200000L)
+                .updatedAt(new Date().getTime())  //1559779200000L
                 .phone(companyRequestDto.getPhone())
                 .foundingYear(companyRequestDto.getFoundingYear())
                 .address(companyRequestDto.getAddress())

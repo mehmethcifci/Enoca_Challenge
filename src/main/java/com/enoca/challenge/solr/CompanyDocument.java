@@ -14,6 +14,12 @@ public class CompanyDocument {
     @Field
     private String companyName;
     @Field
+    private String email;
+    @Field
+    private String phone;
+    @Field
+    private String address;
+    @Field
     private int foundingDate;
     @Field
     private Long updatedAt;
