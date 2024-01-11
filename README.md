@@ -26,12 +26,12 @@ In the application, there are two classes named 'Company' and 'Employee,' and th
 The application primarily performs CRUD operations. In addition, it can retrieve data from Solr by querying for records after a certain date.
 
 ##### Used Endpoints
-localhost:8080/api/v1/company/create
-localhost:8080/api/v1/company/update
-localhost:8080/api/v1/company/findall
-localhost:8080/api/v1/company/delete/{id}
-localhost:8080/api/v1/company/getbyupdatedat/{updatedAt} (It should be in the 'yyyy-MMM' format for the 'updatedAt' field.)
-localhost:8080/api/v1/employee/create
-localhost:8080/api/v1/employee/update
-localhost:8080/api/v1/employee/findall
-localhost:8080/api/v1/employee/delete/{id}
+- localhost:8080/api/v1/company/create
+- localhost:8080/api/v1/company/update
+- localhost:8080/api/v1/company/findall
+- localhost:8080/api/v1/company/delete/{id}
+- localhost:8080/api/v1/company/getbyupdatedat/{updatedAt} (It should be in the 'yyyy-MMM' format for the 'updatedAt' field.)
+- localhost:8080/api/v1/employee/create
+- localhost:8080/api/v1/employee/update
+- localhost:8080/api/v1/employee/findall
+- localhost:8080/api/v1/employee/delete/{id}
